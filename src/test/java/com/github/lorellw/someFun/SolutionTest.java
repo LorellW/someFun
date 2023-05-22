@@ -6,5 +6,12 @@ import org.junit.Test;
 
 
 public class SolutionTest {
+    @Test
+    public void validParenthesesTest(){
+        assertTrue(Solution.isValid("(((qwerty)))"));
+        assertFalse(Solution.isValid("(((qwerty]))"));
+        assertTrue(Solution.isValid("([{qwerty}])"));
+        assertFalse(Solution.isValid("({[qwerty}])"));
+    }
 
 }
